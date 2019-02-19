@@ -1,0 +1,3 @@
+rootProject.name = 'PassingData'
+
+include ':app'
