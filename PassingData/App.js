@@ -1,33 +1,29 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
-import Header from './src/Header';
-import Presser from './src/Presser';
+import React, { Component } from "react";
+import { View } from "react-native";
+import Header from "./src/Header";
+import Presser from "./src/Presser";
 
 class App extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      text: 'Home'
-    }
+      text: "Home"
+    };
   }
-
 
   onChangeText(newText) {
     this.setState({
       text: newText
     });
-}
-      render() {
-        return (
-          <View>
-            <Header text={this.state.text} />
-            <Presser 
-              changeText={this.onChangeText.bind(this)}
-            />
-          </View>
-          );
-      }
+  }
+  render() {
+    return (
+      <View>
+        <Header text={this.state.text} />
+        <Presser changeText={this.onChangeText.bind(this)} />
+      </View>
+    );
+  }
 }
 
 export default App;
